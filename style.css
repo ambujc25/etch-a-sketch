@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --rows: 1;
+    --columns: 1;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(var(--columns),1fr);
+    grid-template-rows: repeat(var(--rows),1fr);
+    width: 80%;
+    height: 70%;
+    margin: 4% auto;
+    border: 2px solid #111;
+}
+
+#button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    margin: 3% auto;
+}
+
+button{
+    text-align: center;
+    font-size: 15px;
+    padding: 5px 30px;
+    border-radius: 20px;
+    background-color: white;
+    border: 2px solid grey;
+    transition-duration: 0.3s;
+}
+
+button:hover{
+    background-color: grey;
+    color: white;
+}
+
+.grid-item{
+    /*border: 1px solid #aaa;*/
+    text-align: center;
+}
+
+.grid-item:hover{
+    background-color: black;
+}
