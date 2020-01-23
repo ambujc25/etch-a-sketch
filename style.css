@@ -43,7 +43,7 @@ button:hover{
 }
 
 .grid-item{
-    /*border: 1px solid #aaa;*/
+    border: 1px solid #aaa;
     text-align: center;
 }
 
