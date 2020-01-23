@@ -17,7 +17,7 @@ function color_grid(){
     const cells = document.querySelectorAll(".grid-item");
     cells.forEach((c) => {
         c.addEventListener('mouseover', (e)=> {
-            c.style.cssText = "background-color: black";
+            c.style.cssText = "background-color:" + random_color();
         });
     });
 }
@@ -28,6 +28,7 @@ const button = document.querySelector('button');
 
 button.addEventListener('click',(e) => {
     const cells = document.querySelectorAll(".grid-item");
+    
     cells.forEach((c) => {
         c.style.cssText = "background-color:white";
     });
@@ -44,3 +45,8 @@ button.addEventListener('click',(e) => {
     makeRows(row,column);
     color_grid();
 });
+
+function random_color(){
+    var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+    return hue;
+}
